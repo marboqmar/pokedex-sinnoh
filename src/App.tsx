@@ -1,3 +1,11 @@
+import { Header } from "./Header/Header.tsx";
+import { Outlet } from "react-router-dom";
+
 export const App = () => {
-  return <h1>App</h1>;
+  return (
+    <>
+      <Header />
+      <Outlet />
+    </>
+  );
 };
