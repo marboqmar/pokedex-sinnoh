@@ -1,0 +1,11 @@
+@import "./typography";
+
+html {
+  font-family: PKMN-RBYGSC;
+  font-size: 12px;
+  background-image: url("../../../public/sinnoh_map.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: center;
+}

@@ -1,0 +1,15 @@
+@import "../../scss/global/colors";
+
+.header {
+  &--logo {
+    height: 80px;
+  }
+
+  &--search-bar {
+    height: 32px;
+    width: 400px;
+    border-radius: 6px;
+    border: 1px solid $color-black;
+    text-indent: 12px;
+  }
+}

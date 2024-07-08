@@ -1,30 +1,12 @@
-# React + TypeScript + Vite
+# Pokedex Sinnoh
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web en la que puedes consultar los Pokemon que habitan la región de Sinnoh. Para realizarla, he decidido utilizar React, Sass y TypeScript.
+He optado por React en lugar JavaScript ya que React me parece mucho más sencillo de utilizar. También he usado Sass en lugar de CSS porque veo muy útil la utilización de variables y mixins para reutilización de código y también para modificar el código de forma más sencilla. Finalmente, he elegido TypeScript ya que, aunque complica ligeramente el código, hace mucho más predecible la aplicación.
 
-Currently, two official plugins are available:
+Mi primer paso para realizar esta aplicación ha sido familiarizarme con la API que provee los datos de los pokemon que se van a mostrar (PokeApi, https://pokeapi.co/) y encontrar el listado completo de los pokemon a mostrar, ya que solo queremos los pokemon que aparecen en la región de Sinnoh (https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_Sinnoh_Pok%C3%A9dex_number). He definido la información a obtener de la API y he realizado el diseño acorde a esta información (por ejemplo, se ha visto que ningún pokemon tiene más de dos tipos, por lo que esto se ha tenido en cuenta a la hora de realizar el diseño).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Una vez el diseño estaba completo me he puesto con el código. Lo primero que he hecho ha sido crear las rutas a mis componentes utilizando `react-router-dom`, y, una vez las rutas estaban funcionando correctamente, he decidido añadir la fuente que he elegido en el diseño (`PKMN RBYGSC` que es la fuente utilizada en los juegos de Pokemon Amarillo, Rojo y Azul).
+Ya que nunca he utilizado fuentes que no estuvieran disponibles en Google Fonts, este ha sido el primer problema con el que me he encontrado realizando este proyecto, pero he encontrado la solución en este blog https://darshnarekha09.medium.com/adding-local-fonts-in-react-9d1466952042.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+En este momento he creado las variables con los colores que se van a usar en el proyecto y he establecido la imagen de fondo de la aplicación (sin pensar en el modo oscuro por el momento).
+Después, he creado el JSX del header, sin añadirle ninguna lógica y utilizando iconos de https://fontawesome.com/, y he creado los componentes que van a representar la información de un pokemon (en las vistas de grid, lista, y detalles del pokemon) con información predeterminada para comprobar la correcta visualización de los componentes con información controlada.
