@@ -1,6 +1,7 @@
 import "./Header.scss";
 import { Button } from "../Button/Button.tsx";
 import { Link } from "react-router-dom";
+import { ViewOptionsBtn } from "./ViewOptionsBtn.tsx";
 
 export const Header = () => {
   return (
@@ -14,9 +15,7 @@ export const Header = () => {
         placeholder={"Search by name"}
       />
       <div className={"flex-row gap-18"}>
-        <Button className={"header__btn"} color={"white"}>
-          <i className="fa-solid fa-list-ul header__icon"></i>
-        </Button>
+        <ViewOptionsBtn />
         <Button className={"header__btn"} color={"white"}>
           <i className="fa-solid fa-heart header__icon"></i>
         </Button>

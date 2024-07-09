@@ -1,10 +1,17 @@
 import "./PokemonCardGrid.scss";
 import { pokemonInfoParsed } from "../../models/pokemonInfo.ts";
 import { capitalizeFirstLetter } from "../../utils/utils.ts";
+import { Button } from "../Button/Button.tsx";
+import { Link } from "react-router-dom";
 
 export const PokemonCardGrid = (pokemonInfo: pokemonInfoParsed) => {
   return (
-    <div className="flex-column align-center pokemon-card--grid">
+    <Button
+      className="flex-column align-center pokemon-card--grid"
+      component={Link}
+      isLink
+      to={`pokemon-details/${pokemonInfo.id}`}
+    >
       <div className="flex-row space-between pokemon-card--grid__imgs">
         <img
           className={"pokemon-card__pokeball pokemon-card--grid__pokeball"}
@@ -19,12 +26,12 @@ export const PokemonCardGrid = (pokemonInfo: pokemonInfoParsed) => {
         <p>{capitalizeFirstLetter(pokemonInfo.name)}</p>
         <div className="flex-row gap-12">
           {pokemonInfo.types.map((type) => (
-            <div className={`type-styling type--${type}`}>
+            <div className={`type-styling type--${type}`} key={type}>
               {type.toUpperCase()}
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </Button>
   );
 };

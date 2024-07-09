@@ -44,7 +44,7 @@ const PokemonDetailsCard = (pokemon: pokemonDetailsParsed) => {
           <p>{capitalizeFirstLetter(name)}</p>
           <div className="flex-row gap-12">
             {types.map((type) => (
-              <div className={`type-styling type--${type}`}>
+              <div className={`type-styling type--${type}`} key={type}>
                 {type.toUpperCase()}
               </div>
             ))}
@@ -74,7 +74,7 @@ const PokemonDetailsCard = (pokemon: pokemonDetailsParsed) => {
 export const PokemonDetails = () => {
   return (
     <div className={"flex justify-center margin-top-60"}>
-      <PokemonDetailsCard {...pokemonDetailsTestInfo} />{" "}
+      <PokemonDetailsCard {...pokemonDetailsTestInfo} />
     </div>
   );
 };
