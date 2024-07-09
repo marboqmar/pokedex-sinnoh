@@ -3,11 +3,11 @@
 .header {
   padding: 0 30px;
 
-  &--logo {
+  &__logo {
     height: 80px;
   }
 
-  &--search-bar {
+  &__search-bar {
     height: 40px;
     width: 400px;
     border-radius: 6px;
@@ -16,12 +16,12 @@
     background-color: $color-white;
   }
 
-  &--btn {
+  &__btn {
     height: 40px;
     width: 40px;
   }
 
-  &--icon {
+  &__icon {
     color: $color-dark-mode-bg;
     font-size: 22px;
   }

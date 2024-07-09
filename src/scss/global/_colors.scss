@@ -27,3 +27,73 @@ $color-ghost: #5a4485;
 $color-dragon: #5b25f7;
 $color-dark: #574332;
 $color-steel: #aaa9c4;
+
+.type {
+  &--grass {
+    background-color: $color-grass;
+  }
+
+  &--ice {
+    background-color: $color-ice;
+  }
+
+  &--normal {
+    background-color: $color-normal;
+  }
+
+  &--fire {
+    background-color: $color-fire;
+  }
+
+  &--water {
+    background-color: $color-water;
+  }
+
+  &--electric {
+    background-color: $color-electric;
+  }
+
+  &--fight {
+    background-color: $color-fight;
+  }
+
+  &--poison {
+    background-color: $color-poison;
+  }
+
+  &--ground {
+    background-color: $color-ground;
+  }
+
+  &--flying {
+    background-color: $color-flying;
+  }
+
+  &--psychic {
+    background-color: $color-psychic;
+  }
+
+  &--bug {
+    background-color: $color-bug;
+  }
+
+  &--rock {
+    background-color: $color-rock;
+  }
+
+  &--ghost {
+    background-color: $color-ghost;
+  }
+
+  &--dragon {
+    background-color: $color-dragon;
+  }
+
+  &--dark {
+    background-color: $color-dark;
+  }
+
+  &--steel {
+    background-color: $color-steel;
+  }
+}

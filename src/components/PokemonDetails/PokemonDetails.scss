@@ -1,0 +1,9 @@
+@import "../../scss/global/colors";
+
+.pokemon-details {
+  width: 600px;
+  padding-bottom: 24px;
+  background-color: $color-white;
+  border-radius: 12px;
+  border: solid 1px $color-black;
+}

@@ -16,16 +16,34 @@
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .space-between {
   justify-content: space-between;
+}
+
+.gap-12 {
+  gap: 12px;
 }
 
 .gap-18 {
   gap: 18px;
 }
 
-.max-width-1440 {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
+.gap-32 {
+  gap: 32px;
+}
+
+.gap-48 {
+  gap: 48px;
+}
+
+.margin-top-60 {
+  margin-top: 60px;
+}
+
+.width-100 {
+  width: 100%;
 }

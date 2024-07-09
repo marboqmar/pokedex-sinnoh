@@ -1,0 +1,23 @@
+@import "../../scss/global/colors";
+
+.pokemon-card--list {
+  height: 96px;
+  width: 666px;
+  background-color: $color-white;
+  border-radius: 12px;
+  border: 1px solid $color-black;
+  padding: 0 32px;
+
+  &__heart {
+    font-size: 24px;
+  }
+
+  &__pokeball {
+    height: 40px;
+    width: 40px;
+  }
+
+  &__types {
+    width: 194px;
+  }
+}

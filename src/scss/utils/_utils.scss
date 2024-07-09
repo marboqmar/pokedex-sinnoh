@@ -1,0 +1,13 @@
+@import "../global/colors";
+
+.type-styling {
+  height: 19px;
+  width: 91px;
+  color: $color-white;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  border: 1px solid $color-black;
+}

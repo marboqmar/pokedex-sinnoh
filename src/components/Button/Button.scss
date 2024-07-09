@@ -6,21 +6,21 @@
   border: 1px solid $color-black;
   border-radius: 4px;
 
-  &--color {
+  &__color {
     &-white {
       background-color: $color-white;
     }
   }
 
-  &--has-padding {
+  &__has-padding {
     padding: 4px;
   }
 
-  &--without-border {
+  &__without-border {
     border: none;
   }
 
-  &--link {
+  &__link {
     text-decoration: none;
   }
 
@@ -28,7 +28,7 @@
     background-color: $color-white-darker;
   }
 
-  &--without-hover:hover {
+  &__without-hover:hover {
     background-color: transparent;
   }
 }

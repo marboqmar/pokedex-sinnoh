@@ -1,8 +1,14 @@
+import "./PokemonList.scss";
+import { pokemonTestInfo } from "../../utils/pokemonTestInfo.ts";
+// import { PokemonCardGrid } from "../PokemonCards/PokemonCardGrid.tsx";
+import { PokemonCardList } from "../PokemonCards/PokemonCardList.tsx";
+
 export const PokemonList = () => {
   return (
-    <>
-      <h1>PokemonList</h1>
-      <p>Testing testing</p>
-    </>
+    <div className={"pokemon-display--list"}>
+      {pokemonTestInfo.map((pokemon) => (
+        <PokemonCardList {...pokemon} />
+      ))}
+    </div>
   );
 };

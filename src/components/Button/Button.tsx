@@ -29,11 +29,11 @@ export const Button = ({
     btn: true,
     font: true,
     [className]: className,
-    [`btn--color-${color}`]: color,
-    "btn--has-padding": hasPadding,
-    "btn--without-border": withoutBorder,
-    "btn--without-hover": withoutHover,
-    "btn--link": isLink,
+    [`btn__color-${color}`]: color,
+    "btn__has-padding": hasPadding,
+    "btn__without-border": withoutBorder,
+    "btn__without-hover": withoutHover,
+    btn__link: isLink,
   });
   const Component = component;
 
