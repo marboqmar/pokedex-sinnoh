@@ -1,8 +1,9 @@
-import { pokemonInfoParsed } from "../models/pokemonInfo.ts";
-
-export const pokemonTestInfo: pokemonInfoParsed[] = [
+export const pokemonTestInfo = [
   {
-    img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+    imgs: {
+      regular:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+    },
     id: 1,
     name: "bulbasaur",
     types: ["grass", "poison"],

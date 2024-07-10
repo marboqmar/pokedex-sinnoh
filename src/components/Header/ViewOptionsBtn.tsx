@@ -10,7 +10,6 @@ export const ViewOptionsBtn = () => {
 
   const changeView = () => {
     view === "grid" ? setView("list") : setView("grid");
-    console.log(view);
   };
 
   useEffect(() => {

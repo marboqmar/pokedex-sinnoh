@@ -16,7 +16,7 @@ $color-normal: #959662;
 $color-fire: #eb6a20;
 $color-water: #547beb;
 $color-electric: #f6c520;
-$color-fight: #b11f19;
+$color-fighting: #b11f19;
 $color-poison: #8c2c8c;
 $color-ground: #d7b251;
 $color-flying: #a88df6;
@@ -53,8 +53,8 @@ $color-steel: #aaa9c4;
     background-color: $color-electric;
   }
 
-  &--fight {
-    background-color: $color-fight;
+  &--fighting {
+    background-color: $color-fighting;
   }
 
   &--poison {

@@ -1,51 +1,31 @@
 import "./PokemonList.scss";
-import { pokemonTestInfo } from "../../utils/pokemonTestInfo.ts";
+// import { pokemonTestInfo } from "../../utils/pokemonTestInfo.ts";
 import { PokemonCardGrid } from "../PokemonCards/PokemonCardGrid.tsx";
 import { PokemonCardList } from "../PokemonCards/PokemonCardList.tsx";
 import { ViewContext } from "../../contexts/ViewContextProvider.tsx";
-import { useContext } from "react";
+import { ComponentType, ReactHTML, useContext } from "react";
+import { InfoFromApiContext } from "../../contexts/InfoFromApiContextProvider.tsx";
 
 export const PokemonList = () => {
   const { view } = useContext(ViewContext);
+  const { parsedPokemon, error, isLoading } = useContext(InfoFromApiContext);
 
-  const Grid = () => {
-    return (
-      <>
-        {pokemonTestInfo.map((pokemon) => (
-          <PokemonCardGrid {...pokemon} key={`${pokemon.id}${pokemon.name}`} />
-        ))}
-      </>
-    );
-  };
-
-  const List = () => {
-    return (
-      <>
-        {pokemonTestInfo.map((pokemon) => (
-          <PokemonCardList {...pokemon} key={`${pokemon.id}${pokemon.name}`} />
-        ))}
-      </>
-    );
-  };
+  const GridOrList: ComponentType<any> | keyof ReactHTML =
+    view === "grid" ? PokemonCardGrid : PokemonCardList;
 
   return (
-    <div className={`pokemon-display--${view}`}>
-      {view === "grid" ? <Grid /> : <List />}
+    <div className={"pokemon-display"}>
+      {error && !isLoading ? (
+        <p>{error}</p>
+      ) : isLoading ? (
+        <p>Loading</p>
+      ) : (
+        <div className={`pokemon-display--${view}`}>
+          {parsedPokemon.map((pokemon) => (
+            <GridOrList {...pokemon} key={`${pokemon.id}${pokemon.name}`} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
-
-// export const PokemonList = () => {
-//   const { view } = useContext(ViewContext);
-//
-//   const GridOrList: ComponentType<any> | keyof ReactHTML =
-//       view === "grid" ? "PokemonCardGrid" : "PokemonCardList";
-//
-//   return (
-//       <div className={`pokemon-display--${view}`}>
-//         {pokemonTestInfo.map((pokemon) => (
-//             <GridOrList {...pokemon} key={`${pokemon.id}${pokemon.name}`} />
-//         ))}
-//       </div>
-//   );
-// };

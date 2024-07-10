@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
         element: <PokemonList />,
       },
       {
-        path: "/pokemon-details/:pokemonId",
+        path: "/pokemon-details/:pokemonName",
         element: <PokemonDetails />,
       },
     ],
