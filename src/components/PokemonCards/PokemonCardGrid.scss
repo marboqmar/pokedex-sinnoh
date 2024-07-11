@@ -22,6 +22,10 @@
   &__heart {
     padding: 8px 2px 0 0;
     font-size: 22px;
+
+    &--fav {
+      color: red;
+    }
   }
 }
 

@@ -1,4 +1,4 @@
-import { Button } from "../Button/Button.tsx";
+import { Button } from "../../Button/Button.tsx";
 import { useEffect, useState } from "react";
 
 type siteThemeOptions = "dark" | "light";

@@ -7,13 +7,16 @@ import { InfoFromApiContext } from "../../contexts/InfoFromApiContextProvider.ts
 import { Pagination } from "../Pagination/Pagination.tsx";
 import { useCurrentDisplayedPokemon } from "../CurrentDisplayedPokemon/CurrentDisplayedPokemon.tsx";
 import { pokemonDetailsParsed } from "../../models/pokemonInfo.ts";
+import { usePokemonToDisplay } from "../../utils/usePokemonToDisplay.ts";
 
 export const PokemonDisplay = () => {
   const { view } = useContext(ViewContext);
-  const { parsedPokemon, error, isLoading } = useContext(InfoFromApiContext);
-  const [currentPage, setCurrentPage] = useState(1);
+  const { error, isLoading } = useContext(InfoFromApiContext);
+  const filteredPokemon = usePokemonToDisplay();
+
   // Pagination
-  const length: number = parsedPokemon.length;
+  const [currentPage, setCurrentPage] = useState(1);
+  const length: number = filteredPokemon.length;
   const pokemonPerPage: number = 15;
   const currentPokemon: pokemonDetailsParsed[] = useCurrentDisplayedPokemon(
     currentPage,
@@ -24,7 +27,7 @@ export const PokemonDisplay = () => {
     setCurrentPage(page);
   };
 
-  // View option
+  // View options
   const GridOrList: ComponentType<any> | keyof ReactHTML =
     view === "grid" ? PokemonCardGrid : PokemonCardList;
 

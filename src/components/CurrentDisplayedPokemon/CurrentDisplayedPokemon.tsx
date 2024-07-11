@@ -1,19 +1,19 @@
-import { useContext, useMemo } from "react";
-import { InfoFromApiContext } from "../../contexts/InfoFromApiContextProvider.tsx";
+import { useMemo } from "react";
+import { usePokemonToDisplay } from "../../utils/usePokemonToDisplay.ts";
 
 export const useCurrentDisplayedPokemon = (
   currentPage: number,
   pokemonPerPage: number,
 ) => {
-  const { parsedPokemon } = useContext(InfoFromApiContext);
+  const filteredPokemon = usePokemonToDisplay();
 
   return useMemo(() => {
     const firstDisplayedPokemonIndex = (currentPage - 1) * pokemonPerPage;
     const lastDisplayedPokemonIndex =
       firstDisplayedPokemonIndex + pokemonPerPage;
-    return parsedPokemon.slice(
+    return filteredPokemon.slice(
       firstDisplayedPokemonIndex,
       lastDisplayedPokemonIndex,
     );
-  }, [currentPage, parsedPokemon, pokemonPerPage]);
+  }, [currentPage, filteredPokemon, pokemonPerPage]);
 };

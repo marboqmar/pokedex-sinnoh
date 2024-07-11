@@ -3,6 +3,7 @@ import { pokemonDetailsParsed } from "../../models/pokemonInfo.ts";
 import { capitalizeFirstLetter } from "../../utils/utils.ts";
 import { Link } from "react-router-dom";
 import { Button } from "../Button/Button.tsx";
+import { FavButton } from "./FavButton.tsx";
 
 export const PokemonCardList = (pokemonInfo: pokemonDetailsParsed) => {
   return (
@@ -12,7 +13,7 @@ export const PokemonCardList = (pokemonInfo: pokemonDetailsParsed) => {
       isLink
       to={`pokemon-details/${pokemonInfo.name}`}
     >
-      <i className="fa-regular fa-heart pokemon-card--list__heart"></i>
+      <FavButton pokemonInfo={pokemonInfo} />
       <img
         src={pokemonInfo.imgs.default}
         alt="Image depicting selected pokemon"

@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
-import { ViewContext } from "../../contexts/ViewContextProvider.tsx";
+import { ViewContext } from "../../../contexts/ViewContextProvider.tsx";
 import { useLocation } from "react-router-dom";
-import { Button } from "../Button/Button.tsx";
+import { Button } from "../../Button/Button.tsx";
 
 export const ViewOptionsButton = () => {
   const { setView, view } = useContext(ViewContext);

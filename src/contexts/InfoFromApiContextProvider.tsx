@@ -1,4 +1,10 @@
-import { createContext, ReactNode, useEffect, useState } from "react";
+import {
+  createContext,
+  ReactNode,
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
 import {
   pokemonDetailsFromApi,
   pokemonDetailsParsed,
@@ -66,26 +72,28 @@ export const InfoFromApiContextProvider = ({
   }
 
   // Fetch pokemon from API
-  useEffect(() => {
-    const fetchPokemon = async () => {
-      try {
-        setError("");
-        setIsLoading(true);
-        const requests = urls.map((url) => axios.get(url));
-        axios.all(requests).then((responses) => {
-          responses.forEach((response) => {
-            pokemonFromApi.push(response.data);
-            setParsedPokemon(mapPokemonApiToPokemonDetails(pokemonFromApi));
-          });
+  const fetchPokemon = useCallback(async () => {
+    try {
+      setError("");
+      setIsLoading(true);
+      const requests = urls.map((url) => axios.get(url));
+      axios.all(requests).then((responses) => {
+        responses.forEach((response) => {
+          pokemonFromApi.push(response.data);
+          setParsedPokemon(mapPokemonApiToPokemonDetails(pokemonFromApi));
         });
-      } catch (error) {
-        setError("API did not provide any results");
-      }
-      setIsLoading(false);
-    };
-    fetchPokemon();
+      });
+    } catch (error) {
+      setError("API did not provide any results");
+    }
+    setIsLoading(false);
+    // Disabled following warning as is asking to add "urls" as dependencies, which causes a loop.
     // eslint-disable-next-line
   }, []);
+
+  useEffect(() => {
+    fetchPokemon();
+  }, [fetchPokemon]);
 
   return (
     <InfoFromApiContext.Provider value={contextValue}>

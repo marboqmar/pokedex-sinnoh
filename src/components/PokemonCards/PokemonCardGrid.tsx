@@ -3,6 +3,7 @@ import { pokemonDetailsParsed } from "../../models/pokemonInfo.ts";
 import { capitalizeFirstLetter } from "../../utils/utils.ts";
 import { Link } from "react-router-dom";
 import { Button } from "../Button/Button.tsx";
+import { FavButton } from "./FavButton.tsx";
 
 export const PokemonCardGrid = (pokemonInfo: pokemonDetailsParsed) => {
   return (
@@ -22,7 +23,7 @@ export const PokemonCardGrid = (pokemonInfo: pokemonDetailsParsed) => {
           src={pokemonInfo.imgs.default}
           alt="Image depicting selected pokemon"
         />
-        <i className="fa-regular fa-heart pokemon-card__heart pokemon-card--grid__heart"></i>
+        <FavButton pokemonInfo={pokemonInfo} />
       </div>
       <div className={"flex-column align-center gap-12"}>
         <p>#{pokemonInfo.id}</p>
