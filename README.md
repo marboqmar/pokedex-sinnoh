@@ -23,3 +23,5 @@ Como la misma información de los pokemon ha de estar disponible tanto en la hom
 Para la paginación, he buscado como hacerla en estos blogs ya que no la había hecho antes: https://dev.to/canhamzacode/how-to-implement-pagination-with-reactjs-2b04 y https://www.freecodecamp.org/news/build-a-custom-pagination-component-in-react/.
 
 En el caso del modo oscuro, me he ayudado de este blog para implementarlo https://dev.to/franklin030601/using-dark-mode-in-your-react-app-5364.
+
+Lo siguiente que he implementado ha sido los filtros de favoritos y búsqueda por nombre.

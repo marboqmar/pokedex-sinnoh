@@ -18,6 +18,7 @@ export interface pokemonDetailsParsed {
   specialAttack: number;
   specialDefense: number;
   speed: number;
+  isFav: boolean;
 }
 
 export interface pokemonDetailsFromApi {

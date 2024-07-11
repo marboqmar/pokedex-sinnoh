@@ -34,6 +34,7 @@ export const mapPokemonApiToPokemonDetails = (
       specialAttack: stats[3].base_stat,
       specialDefense: stats[4].base_stat,
       speed: stats[5].base_stat,
+      isFav: false,
     };
   });
 };

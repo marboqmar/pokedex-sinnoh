@@ -84,7 +84,8 @@ export const InfoFromApiContextProvider = ({
       setIsLoading(false);
     };
     fetchPokemon();
-  }, [urls]);
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <InfoFromApiContext.Provider value={contextValue}>
