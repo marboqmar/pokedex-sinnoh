@@ -5,6 +5,7 @@
   background-color: $color-white;
   border-radius: 12px;
   border: 1px solid $color-black;
+  box-shadow: 2px 2px 4px $color-dark-mode-bg;
   padding: 0 32px;
 
   &__heart {
@@ -27,4 +28,8 @@
     height: 40px;
     width: 40px;
   }
+}
+
+body[site-theme="dark"] .pokemon-card--list {
+  box-shadow: 2px 2px 4px $color-black;
 }

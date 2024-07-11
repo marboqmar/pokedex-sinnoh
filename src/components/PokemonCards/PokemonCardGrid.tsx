@@ -10,7 +10,6 @@ export const PokemonCardGrid = (pokemonInfo: pokemonDetailsParsed) => {
       className={"flex-column align-center pokemon-card--grid"}
       component={Link}
       isLink
-      withoutBorder
       to={`pokemon-details/${pokemonInfo.name}`}
     >
       <div className="flex-row space-between pokemon-card--grid__imgs">

@@ -14,6 +14,10 @@
     border: 1px solid $color-black;
     text-indent: 12px;
     background-color: $color-white;
+
+    &::placeholder {
+      color: $color-placeholder;
+    }
   }
 
   &__btn {
@@ -24,5 +28,20 @@
   &__icon {
     color: $color-dark-mode-bg;
     font-size: 22px;
+  }
+}
+
+body[site-theme="dark"] .header {
+  &__search-bar {
+    background-color: $color-dark-mode-bg;
+    color: $color-white;
+
+    &::placeholder {
+      color: $color-dark-mode-placeholder;
+    }
+  }
+
+  &__icon {
+    color: $color-white;
   }
 }

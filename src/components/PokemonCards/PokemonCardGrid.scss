@@ -5,7 +5,7 @@
   width: 218px;
   background-color: $color-white;
   border-radius: 12px;
-  border: solid 1px $color-black;
+  box-shadow: 2px 2px 4px $color-dark-mode-bg;
 
   &__imgs {
     padding: 0 6px;
@@ -23,4 +23,8 @@
     padding: 8px 2px 0 0;
     font-size: 22px;
   }
+}
+
+body[site-theme="dark"] .pokemon-card--grid {
+  box-shadow: 2px 2px 4px $color-black;
 }

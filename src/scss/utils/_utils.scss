@@ -10,4 +10,9 @@
   align-items: center;
   border-radius: 6px;
   border: 1px solid $color-black;
+  box-shadow: 1px 1px 3px $color-dark-mode-bg;
+}
+
+body[site-theme="dark"] .type-styling {
+  box-shadow: 2px 2px 4px $color-black;
 }

@@ -5,11 +5,10 @@
   cursor: pointer;
   border: 1px solid $color-black;
   border-radius: 4px;
+  background-color: $color-white;
 
-  &__color {
-    &-white {
-      background-color: $color-white;
-    }
+  &__transparent {
+    background-color: transparent;
   }
 
   &__has-padding {
@@ -26,7 +25,28 @@
   }
 
   &:hover {
-    background-color: $color-white-darker;
+    background-color: $color-white-dark;
+  }
+
+  &__without-hover:hover {
+    background-color: transparent;
+  }
+}
+
+body[site-theme="dark"] .btn {
+  background-color: $color-dark-mode-bg;
+  color: $color-white;
+
+  &__transparent {
+    background-color: transparent;
+  }
+
+  &__without-border {
+    border: none;
+  }
+
+  &:hover {
+    background-color: $color-dark-mode-bg-dark;
   }
 
   &__without-hover:hover {

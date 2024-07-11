@@ -7,4 +7,10 @@
   background-color: $color-white;
   border-radius: 12px;
   border: solid 1px $color-black;
+  box-shadow: 2px 2px 4px $color-dark-mode-bg;
+}
+
+body[site-theme="dark"] .pokemon-details {
+  background-color: $color-dark-mode-bg;
+  box-shadow: 2px 2px 4px $color-black;
 }

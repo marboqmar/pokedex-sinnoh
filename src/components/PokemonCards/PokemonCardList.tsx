@@ -1,10 +1,17 @@
 import "./PokemonCardList.scss";
 import { pokemonDetailsParsed } from "../../models/pokemonInfo.ts";
 import { capitalizeFirstLetter } from "../../utils/utils.ts";
+import { Link } from "react-router-dom";
+import { Button } from "../Button/Button.tsx";
 
 export const PokemonCardList = (pokemonInfo: pokemonDetailsParsed) => {
   return (
-    <div className="flex-row gap-32 align-center pokemon-card--list">
+    <Button
+      className={"flex-row gap-32 align-center pokemon-card--list"}
+      component={Link}
+      isLink
+      to={`pokemon-details/${pokemonInfo.name}`}
+    >
       <i className="fa-regular fa-heart pokemon-card--list__heart"></i>
       <img
         src={pokemonInfo.imgs.default}
@@ -30,6 +37,6 @@ export const PokemonCardList = (pokemonInfo: pokemonDetailsParsed) => {
         src={"/pokeball.png"}
         alt="Pokeball icon"
       />
-    </div>
+    </Button>
   );
 };

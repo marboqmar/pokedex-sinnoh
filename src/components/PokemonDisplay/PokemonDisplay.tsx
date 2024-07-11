@@ -30,7 +30,7 @@ export const PokemonDisplay = () => {
 
   return (
     <>
-      <div className={"pokemon-display"}>
+      <div>
         {error && !isLoading ? (
           <p>{error}</p>
         ) : isLoading ? (

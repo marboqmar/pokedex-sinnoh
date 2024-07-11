@@ -1,9 +1,5 @@
 @import "./typography";
-
-html {
-  font-family: PKMN-RBYGSC;
-  font-size: 14px;
-}
+@import "./_colors.scss";
 
 body {
   padding: 0;
@@ -16,6 +12,14 @@ body {
   background-attachment: fixed;
   height: 100vh;
   background-position: center;
+  font-family: PKMN-RBYGSC;
+  font-size: 14px;
+  color: $color-black;
+}
+
+body[site-theme="dark"] {
+  background-image: url("../../../public/sinnoh_map_dark.png");
+  color: $color-white;
 }
 
 a {

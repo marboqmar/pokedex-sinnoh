@@ -1,3 +1,4 @@
+import "./Pagination.scss";
 import { Button } from "../Button/Button.tsx";
 
 export const Pagination = ({
@@ -18,10 +19,10 @@ export const Pagination = ({
   }
 
   return (
-    <div className="flex justify-center gap-12 pokemon-display__pagination">
+    <div className="flex justify-center gap-12 pagination">
       {paginationNumbers.map((pageNumber) => (
         <Button
-          className={`pokemon-display__pagination-button ${currentPage === pageNumber ? "pokemon-display__pagination-button--active" : ""}`}
+          className={`pagination__button ${currentPage === pageNumber ? "pagination__button--active" : ""}`}
           key={pageNumber}
           onClick={() => setNewCurrentPage(pageNumber)}
         >

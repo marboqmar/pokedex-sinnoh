@@ -2,10 +2,8 @@ import "./Button.scss";
 import { ButtonHTMLAttributes, ComponentType, ReactHTML } from "react";
 import classNames from "classnames";
 
-export type color = "white" | "dark-mode";
-
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  color?: color;
+  transparent?: boolean;
   hasPadding?: boolean;
   withoutBorder?: boolean;
   withoutHover?: boolean;
@@ -16,7 +14,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const Button = ({
   className = "",
-  color,
+  transparent,
   hasPadding,
   withoutBorder,
   withoutHover,
@@ -29,7 +27,7 @@ export const Button = ({
     btn: true,
     font: true,
     [className]: className,
-    [`btn__color-${color}`]: color,
+    btn__transparent: transparent,
     "btn__has-padding": hasPadding,
     "btn__without-border": withoutBorder,
     "btn__without-hover": withoutHover,
