@@ -61,8 +61,7 @@ export const InfoFromApiContextProvider = ({
   const urls: string[] = [];
 
   // The pokemon we need are from 387 to 493
-  // for (let i = 387; i < 494; i++) {
-  for (let i = 387; i < 402; i++) {
+  for (let i = 387; i < 494; i++) {
     urls.push(`https://pokeapi.co/api/v2/pokemon/${i}`);
   }
 
@@ -85,7 +84,7 @@ export const InfoFromApiContextProvider = ({
       setIsLoading(false);
     };
     fetchPokemon();
-  }, []);
+  }, [urls]);
 
   return (
     <InfoFromApiContext.Provider value={contextValue}>

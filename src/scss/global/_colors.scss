@@ -27,6 +27,7 @@ $color-ghost: #5a4485;
 $color-dragon: #5b25f7;
 $color-dark: #574332;
 $color-steel: #aaa9c4;
+$color-fairy: #ff92bf;
 
 .type {
   &--grass {
@@ -95,5 +96,9 @@ $color-steel: #aaa9c4;
 
   &--steel {
     background-color: $color-steel;
+  }
+
+  &--fairy {
+    background-color: $color-fairy;
   }
 }

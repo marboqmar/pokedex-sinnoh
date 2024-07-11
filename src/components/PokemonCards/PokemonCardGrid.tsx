@@ -1,15 +1,16 @@
 import "./PokemonCardGrid.scss";
 import { pokemonDetailsParsed } from "../../models/pokemonInfo.ts";
 import { capitalizeFirstLetter } from "../../utils/utils.ts";
-import { Button } from "../Button/Button.tsx";
 import { Link } from "react-router-dom";
+import { Button } from "../Button/Button.tsx";
 
 export const PokemonCardGrid = (pokemonInfo: pokemonDetailsParsed) => {
   return (
     <Button
-      className="flex-column align-center pokemon-card--grid"
+      className={"flex-column align-center pokemon-card--grid"}
       component={Link}
       isLink
+      withoutBorder
       to={`pokemon-details/${pokemonInfo.name}`}
     >
       <div className="flex-row space-between pokemon-card--grid__imgs">
