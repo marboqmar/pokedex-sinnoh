@@ -28,3 +28,5 @@ Lo siguiente que he implementado ha sido los filtros de favoritos y búsqueda po
 
 Para el responsive, he hecho un contexto para ver el tamaño de la pantalla, pero tenía mal apuntado en mis apuntes el removeEventListener, por lo que solo calculaba una vez el ancho de la pantalla y ya no lo actualizaba. En este blog he visto la solución a mi problema https://stackoverflow.com/questions/19014250/rerender-view-on-browser-resize-with-react.
 Para hacer el hamburger menu con dropdown me he ayudado de esta guía https://selftaughttxg.com/2024/02-24/developing-a-dynamic-hamburger-menu-in-react-a-step-by-step-guide/
+
+Como el responsive causa re-renderizaciones la experiencia con el modo oscuro se veía afectada, así que he movido el modo oscuro al local storage para que se mantenga entre renderizaciones.
