@@ -1,22 +1,28 @@
 import { Button } from "../../Button/Button.tsx";
-import { useEffect, useState } from "react";
-
-type siteThemeOptions = "dark" | "light";
 
 export const DarkModeButton = () => {
-  const [siteTheme, setSiteTheme] = useState<siteThemeOptions>("light");
+  localStorage.setItem("Dark_mode", "light");
 
-  const handleThemeChange = () => {
-    setSiteTheme(siteTheme === "light" ? "dark" : "light");
+  const handleThemeChangeLight = () => {
+    if (localStorage.getItem("Dark_mode") === "light") {
+      localStorage.setItem("Dark_mode", "dark");
+    } else {
+      localStorage.setItem("Dark_mode", "light");
+    }
+
+    const currentTheme = localStorage.getItem("Dark_mode");
+
+    if (currentTheme) {
+      document.body.setAttribute("site-theme", currentTheme);
+    }
+    console.log(localStorage.getItem("Dark_mode"));
   };
 
-  useEffect(() => {
-    document.body.setAttribute("site-theme", siteTheme);
-  });
-
   return (
-    <Button className={"header__btn"} onClick={handleThemeChange}>
-      <i className="fa-solid fa-circle-half-stroke header__icon"></i>
-    </Button>
+    <>
+      <Button className={"header__btn"} onClick={handleThemeChangeLight}>
+        <i className="fa-solid fa-circle-half-stroke header__icon"></i>
+      </Button>
+    </>
   );
 };

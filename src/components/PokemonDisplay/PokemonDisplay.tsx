@@ -26,6 +26,8 @@ export const PokemonDisplay = () => {
   const GridOrList: ComponentType<any> | keyof ReactHTML =
     view === "grid" ? PokemonCardGrid : PokemonCardList;
 
+  // Dark mode
+
   return (
     <>
       <div>
