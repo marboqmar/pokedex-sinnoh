@@ -25,3 +25,6 @@ Para la paginación, he buscado como hacerla en estos blogs ya que no la había 
 En el caso del modo oscuro, me he ayudado de este blog para implementarlo https://dev.to/franklin030601/using-dark-mode-in-your-react-app-5364.
 
 Lo siguiente que he implementado ha sido los filtros de favoritos y búsqueda por nombre.
+
+Para el responsive, he hecho un contexto para ver el tamaño de la pantalla, pero tenía mal apuntado en mis apuntes el removeEventListener, por lo que solo calculaba una vez el ancho de la pantalla y ya no lo actualizaba. En este blog he visto la solución a mi problema https://stackoverflow.com/questions/19014250/rerender-view-on-browser-resize-with-react.
+Para hacer el hamburger menu con dropdown me he ayudado de esta guía https://selftaughttxg.com/2024/02-24/developing-a-dynamic-hamburger-menu-in-react-a-step-by-step-guide/

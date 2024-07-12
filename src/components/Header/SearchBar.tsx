@@ -16,7 +16,7 @@ export const SearchBar = () => {
   };
 
   return (
-    <form className={"searchBar margin-ver-auto"} onSubmit={handleOnSubmit}>
+    <form className={"margin-ver-auto"} onSubmit={handleOnSubmit}>
       <input
         className={"font header__search-bar"}
         type={"text"}

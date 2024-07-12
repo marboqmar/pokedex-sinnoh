@@ -30,12 +30,12 @@
   }
 }
 
-body[site-theme="dark"] .pokemon-card--list {
-  box-shadow: 2px 2px 4px $color-black;
-}
-
 @media (width < 600px) {
   .pokemon-card--list {
     gap: 12px;
   }
+}
+
+body[site-theme="dark"] .pokemon-card--list {
+  box-shadow: 2px 2px 4px $color-black;
 }

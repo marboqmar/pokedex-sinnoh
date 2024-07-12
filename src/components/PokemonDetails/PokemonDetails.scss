@@ -16,15 +16,6 @@
   }
 }
 
-body[site-theme="dark"] .pokemon-details {
-  background-color: $color-dark-mode-bg;
-  box-shadow: 2px 2px 4px $color-black;
-
-  &__back-button {
-    box-shadow: 2px 2px 4px $color-black;
-  }
-}
-
 @media (width < 840px) {
   .pokemon-details__card {
     width: 504px;
@@ -46,5 +37,14 @@ body[site-theme="dark"] .pokemon-details {
 @media (width < 600px) {
   .pokemon-details__card {
     width: 384px;
+  }
+}
+
+body[site-theme="dark"] .pokemon-details__card {
+  background-color: $color-dark-mode-bg;
+  box-shadow: 2px 2px 4px $color-black;
+
+  &__back-button {
+    box-shadow: 2px 2px 4px $color-black;
   }
 }

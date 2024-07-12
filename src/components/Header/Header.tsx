@@ -6,6 +6,8 @@ import { SearchBar } from "./SearchBar.tsx";
 import { ShowViewOptionsAndFavsButtons } from "./ShowViewOptionsAndFavsButtons.tsx";
 import { useContext } from "react";
 import { WindowWidthContext } from "../../contexts/WindowWidthContextProvider.tsx";
+import { useIsOnPokemonDetails } from "../../utils/useIsOnPokemonDetails.ts";
+import { BurgerButton } from "./HeaderButtons/BurgerButton.tsx";
 
 export const Header = () => {
   const { windowWidth } = useContext(WindowWidthContext);
@@ -21,18 +23,30 @@ export const Header = () => {
         to={"/"}
       >
         <img
-          className={"header__logo"}
-          src={windowWidth > 960 ? "/logo.png" : "./logo-vertical.png"}
+          src={
+            windowWidth > 1014
+              ? "/logo.png"
+              : windowWidth > 600
+                ? "./logo-vertical.png"
+                : "logo-compact.png"
+          }
           alt="logo"
         />
       </Button>
       <SearchBar />
-      <div className={"flex-row gap-18"}>
-        {/*<Button className={"header__btn"}>*/}
-        {/*  <i className="fa-solid fa-circle-half-stroke header__icon"></i>*/}
-        {/*</Button>*/}
-        <ShowViewOptionsAndFavsButtons />
-        <DarkModeButton />
+      <div className={"flex-row gap-18 header__right-side-buttons"}>
+        {!useIsOnPokemonDetails() ? (
+          windowWidth > 822 ? (
+            <>
+              <ShowViewOptionsAndFavsButtons />
+              <DarkModeButton />
+            </>
+          ) : (
+            <BurgerButton />
+          )
+        ) : (
+          <DarkModeButton />
+        )}
       </div>
     </div>
   );

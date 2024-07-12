@@ -3,10 +3,6 @@
 .header {
   padding: 0 30px;
 
-  &__logo {
-    //height: 80px;
-  }
-
   &__search-bar {
     height: 40px;
     width: 400px;
@@ -20,19 +16,52 @@
     }
   }
 
+  &__right-side-buttons {
+    width: 247px;
+    justify-content: flex-end;
+  }
+
   &__btn {
     height: 40px;
     width: 40px;
+
+    &--burger {
+      position: relative;
+    }
   }
 
   &__icon {
     color: $color-dark-mode-bg;
     font-size: 22px;
   }
+
+  &__dropdown-menu {
+    position: absolute;
+    top: 90px;
+    right: 30px;
+  }
 }
 
 #header__icon--heart--active {
   background-color: $color-flying;
+}
+
+@media (width < 1014px) {
+  .header__right-side-buttons {
+    width: 180px;
+  }
+}
+
+@media (width < 823px) {
+  .header__right-side-buttons {
+    width: 40px;
+  }
+}
+
+@media (width < 702px) {
+  .header__search-bar {
+    width: 288px;
+  }
 }
 
 body[site-theme="dark"] .header {
