@@ -21,13 +21,13 @@ const contextDefault: FiltersContextModel = {
 export const FiltersContext =
   createContext<FiltersContextModel>(contextDefault);
 
-interface SearchContextProviderProps {
+interface FiltersContextProviderProps {
   children: ReactNode;
 }
 
 export const FiltersContextProvider = ({
   children,
-}: SearchContextProviderProps): JSX.Element | null => {
+}: FiltersContextProviderProps): JSX.Element | null => {
   const [search, setSearch] = useState<string>("");
   const [isOnlyFavs, setIsOnlyFavs] = useState<boolean>(false);
 

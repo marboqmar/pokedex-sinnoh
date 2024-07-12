@@ -23,10 +23,6 @@ export const PokemonDisplay = () => {
     pokemonPerPage,
   );
 
-  const setNewCurrentPage = (page: number) => {
-    setCurrentPage(page);
-  };
-
   // View options
   const GridOrList: ComponentType<any> | keyof ReactHTML =
     view === "grid" ? PokemonCardGrid : PokemonCardList;
@@ -49,7 +45,7 @@ export const PokemonDisplay = () => {
       <Pagination
         pokemonPerPage={pokemonPerPage}
         length={length}
-        setNewCurrentPage={setNewCurrentPage}
+        setNewCurrentPage={setCurrentPage}
         currentPage={currentPage}
       />
     </>

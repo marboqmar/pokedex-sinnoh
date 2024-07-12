@@ -9,8 +9,12 @@ export const DisplayOnlyFavsButton = () => {
   };
 
   return (
-    <Button className={"header__btn"} onClick={handleOnlyFavs}>
-      <i className="fa-solid fa-heart header__icon"></i>
+    <Button
+      id={`${!isOnlyFavs ? "" : "header__icon--heart--active"}`}
+      className={"header__btn"}
+      onClick={handleOnlyFavs}
+    >
+      <i className={"fa-solid fa-heart header__icon"}></i>
     </Button>
   );
 };
