@@ -7,7 +7,7 @@ import { ShowViewOptionsAndFavsButtons } from "./ShowViewOptionsAndFavsButtons.t
 
 export const Header = () => {
   return (
-    <div className="flex-row space-between align-center max-width-1440 header">
+    <div className="flex-row space-between align-center header">
       <Button
         transparent
         withoutBorder
