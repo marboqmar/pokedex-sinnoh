@@ -22,6 +22,12 @@
   &__heart {
     padding: 8px 2px 0 0;
     font-size: 22px;
+    width: 24px;
+    height: 30px;
+
+    &:hover {
+      color: red;
+    }
 
     &--fav {
       color: red;
