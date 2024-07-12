@@ -13,7 +13,6 @@ export const PokemonDisplay = () => {
   const { view } = useContext(ViewContext);
   const { error, isLoading } = useContext(InfoFromApiContext);
   const filteredPokemon = usePokemonToDisplay();
-
   // Pagination
   const [currentPage, setCurrentPage] = useState(1);
   const length: number = filteredPokemon.length;

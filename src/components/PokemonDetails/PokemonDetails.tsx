@@ -19,7 +19,9 @@ export const PokemonDetails = () => {
       {!selectedPokemon ? (
         <p>Pokemon not found</p>
       ) : (
-        <div className={"flex justify-center gap-48 margin-top-60"}>
+        <div
+          className={"flex justify-center gap-48 margin-top-60 pokemon-details"}
+        >
           <Button
             className={
               "flex justify-center align-center header__btn pokemon-details__back-button"

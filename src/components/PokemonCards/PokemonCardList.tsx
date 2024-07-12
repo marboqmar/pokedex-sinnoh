@@ -4,8 +4,21 @@ import { capitalizeFirstLetter } from "../../utils/utils.ts";
 import { Link } from "react-router-dom";
 import { Button } from "../Button/Button.tsx";
 import { FavButton } from "./FavButton.tsx";
+import { useContext, useEffect, useState } from "react";
+import { WindowWidthContext } from "../../contexts/WindowWidthContextProvider.tsx";
 
 export const PokemonCardList = (pokemonInfo: pokemonDetailsParsed) => {
+  const [areTypesShown, setAreTypeShown] = useState<boolean>(true);
+  const { windowWidth } = useContext(WindowWidthContext);
+
+  useEffect(() => {
+    if (windowWidth < 870) {
+      setAreTypeShown(false);
+    } else {
+      setAreTypeShown(true);
+    }
+  }, [windowWidth]);
+
   return (
     <Button
       className={"flex-row gap-32 align-center pokemon-card--list"}
@@ -23,15 +36,21 @@ export const PokemonCardList = (pokemonInfo: pokemonDetailsParsed) => {
         <p className={"pokemon-card--list__name"}>
           {capitalizeFirstLetter(pokemonInfo.name)}
         </p>
-        <div
-          className={"flex-row gap-12 justify-center pokemon-card--list__types"}
-        >
-          {pokemonInfo.types.map((type) => (
-            <div className={`type-styling type--${type}`} key={type}>
-              {type.toUpperCase()}
-            </div>
-          ))}
-        </div>
+        {!areTypesShown ? (
+          ""
+        ) : (
+          <div
+            className={
+              "flex-row gap-12 justify-center pokemon-card--list__types"
+            }
+          >
+            {pokemonInfo.types.map((type) => (
+              <div className={`type-styling type--${type}`} key={type}>
+                {type.toUpperCase()}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
       <img
         className={"pokemon-card--list__pokeball"}

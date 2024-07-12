@@ -1,16 +1,18 @@
 @import "../../scss/global/colors";
 
 .pokemon-details {
-  width: 600px;
-  padding-bottom: 24px;
-  margin-bottom: 60px;
-  background-color: $color-white;
-  border-radius: 12px;
-  border: solid 1px $color-black;
-  box-shadow: 2px 2px 4px $color-dark-mode-bg;
-
-  &__back-button {
+  &__card {
+    width: 600px;
+    padding-bottom: 24px;
+    margin-bottom: 60px;
+    background-color: $color-white;
+    border-radius: 12px;
+    border: solid 1px $color-black;
     box-shadow: 2px 2px 4px $color-dark-mode-bg;
+
+    &__back-button {
+      box-shadow: 2px 2px 4px $color-dark-mode-bg;
+    }
   }
 }
 
@@ -20,5 +22,29 @@ body[site-theme="dark"] .pokemon-details {
 
   &__back-button {
     box-shadow: 2px 2px 4px $color-black;
+  }
+}
+
+@media (width < 840px) {
+  .pokemon-details__card {
+    width: 504px;
+  }
+}
+
+@media (width < 744px) {
+  .pokemon-details__card {
+    width: 420px;
+  }
+}
+
+@media (width < 660px) {
+  .pokemon-details {
+    gap: 12px;
+  }
+}
+
+@media (width < 600px) {
+  .pokemon-details__card {
+    width: 384px;
   }
 }

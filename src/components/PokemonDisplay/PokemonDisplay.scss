@@ -15,3 +15,35 @@
     align-items: center;
   }
 }
+
+@media (width < 1440px) {
+  .pokemon-display {
+    &--grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@media (width < 1086px) {
+  .pokemon-display {
+    &--grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (width < 841px) {
+  .pokemon-display {
+    &--grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (width < 768px) {
+  .pokemon-display {
+    &--grid {
+      margin: 30px;
+    }
+  }
+}
