@@ -1,7 +1,7 @@
 import { Button } from "../../Button/Button.tsx";
 import { useState } from "react";
 import { ShowViewOptionsAndFavsButtons } from "../ShowViewOptionsAndFavsButtons.tsx";
-import { DarkModeButton } from "./DarkModeButton.tsx";
+import { ThemeChangeButton } from "./ThemeChangeButton.tsx";
 
 export const BurgerButton = () => {
   const [isActive, setIsActive] = useState(false);
@@ -21,7 +21,7 @@ export const BurgerButton = () => {
       {isActive && (
         <div className="flex gap-12 header__dropdown-menu">
           <ShowViewOptionsAndFavsButtons />
-          <DarkModeButton />
+          <ThemeChangeButton />
         </div>
       )}
     </>

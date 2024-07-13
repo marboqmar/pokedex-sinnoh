@@ -7,7 +7,6 @@ export const PokemonDetailsCard = (pokemon: pokemonDetailsParsed) => {
     id,
     name,
     types,
-    description,
     weight,
     height,
     baseExperience,
@@ -34,7 +33,6 @@ export const PokemonDetailsCard = (pokemon: pokemonDetailsParsed) => {
             ))}
           </div>
         </div>
-        <p>{description}</p>
         <div className="flex-column gap-12">
           <p>Weight: {weight}kg</p>
           <p>Height: {height}cm</p>
@@ -49,7 +47,6 @@ export const PokemonDetailsCard = (pokemon: pokemonDetailsParsed) => {
           <p>Special defense: {specialDefense}</p>
           <p>Speed: {speed}</p>
         </div>
-        <p>Evolution chart</p>
       </div>
     </div>
   );

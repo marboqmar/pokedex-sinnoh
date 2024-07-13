@@ -8,7 +8,6 @@ export interface pokemonDetailsParsed {
   id: number;
   name: string;
   types: string[];
-  description?: string;
   weight: number;
   height: number;
   baseExperience: number;

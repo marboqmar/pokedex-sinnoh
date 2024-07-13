@@ -30,3 +30,6 @@ Para el responsive, he hecho un contexto para ver el tamaño de la pantalla, per
 Para hacer el hamburger menu con dropdown me he ayudado de esta guía https://selftaughttxg.com/2024/02-24/developing-a-dynamic-hamburger-menu-in-react-a-step-by-step-guide/
 
 Como el responsive causa re-renderizaciones la experiencia con el modo oscuro se veía afectada, así que he movido el modo oscuro al local storage para que se mantenga entre renderizaciones.
+
+Al añadir testing, al intentar usar `toBeInTheDocument()` me aparecía un error indicando que esta propiedad no existía, he conseguido arreglar este problema con las respuestas encontradas en este post https://github.com/testing-library/jest-dom/issues/515.
+He visto como generar random booleans aquí https://stackoverflow.com/questions/36756331/js-generate-random-boolean.

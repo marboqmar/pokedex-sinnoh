@@ -4,7 +4,6 @@ import classNames from "classnames";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   transparent?: boolean;
-  hasPadding?: boolean;
   withoutBorder?: boolean;
   withoutHover?: boolean;
   component?: ComponentType<any> | keyof ReactHTML;
@@ -15,7 +14,6 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button = ({
   className = "",
   transparent,
-  hasPadding,
   withoutBorder,
   withoutHover,
   component = "button",
@@ -28,7 +26,6 @@ export const Button = ({
     font: true,
     [className]: className,
     btn__transparent: transparent,
-    "btn__has-padding": hasPadding,
     "btn__without-border": withoutBorder,
     "btn__without-hover": withoutHover,
     btn__link: isLink,

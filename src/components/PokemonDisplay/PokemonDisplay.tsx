@@ -8,6 +8,7 @@ import { Pagination } from "../Pagination/Pagination.tsx";
 import { useCurrentDisplayedPokemon } from "../CurrentDisplayedPokemon/CurrentDisplayedPokemon.tsx";
 import { pokemonDetailsParsed } from "../../models/pokemonInfo.ts";
 import { usePokemonToDisplay } from "../../utils/usePokemonToDisplay.ts";
+import { LOCAL_STORAGE_DARK_MODE_KEY } from "../../utils/themeChange.ts";
 
 export const PokemonDisplay = () => {
   const { view } = useContext(ViewContext);
@@ -25,6 +26,9 @@ export const PokemonDisplay = () => {
   // View options
   const GridOrList: ComponentType<any> | keyof ReactHTML =
     view === "grid" ? PokemonCardGrid : PokemonCardList;
+
+  // Dark mode
+  localStorage.setItem(LOCAL_STORAGE_DARK_MODE_KEY, "light");
 
   return (
     <>
