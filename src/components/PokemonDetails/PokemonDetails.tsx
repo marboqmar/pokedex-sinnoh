@@ -24,7 +24,7 @@ export const PokemonDetails = () => {
         >
           <Button
             className={
-              "flex justify-center align-center header__btn pokemon-details__back-button"
+              "flex justify-center align-center header__btn pokemon-details__card__back-button"
             }
             component={Link}
             isLink

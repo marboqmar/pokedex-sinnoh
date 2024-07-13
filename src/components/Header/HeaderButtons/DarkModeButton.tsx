@@ -1,21 +1,23 @@
 import { Button } from "../../Button/Button.tsx";
 
+const LOCAL_STORAGE_DARK_MODE_KEY = "Dark-mode";
+
 export const DarkModeButton = () => {
-  localStorage.setItem("Dark_mode", "light");
+  localStorage.setItem(LOCAL_STORAGE_DARK_MODE_KEY, "light");
 
   const handleThemeChangeLight = () => {
-    if (localStorage.getItem("Dark_mode") === "light") {
-      localStorage.setItem("Dark_mode", "dark");
+    if (localStorage.getItem(LOCAL_STORAGE_DARK_MODE_KEY) === "light") {
+      localStorage.setItem(LOCAL_STORAGE_DARK_MODE_KEY, "dark");
     } else {
-      localStorage.setItem("Dark_mode", "light");
+      localStorage.setItem(LOCAL_STORAGE_DARK_MODE_KEY, "light");
     }
 
-    const currentTheme = localStorage.getItem("Dark_mode");
+    const currentTheme = localStorage.getItem(LOCAL_STORAGE_DARK_MODE_KEY);
 
     if (currentTheme) {
       document.body.setAttribute("site-theme", currentTheme);
     }
-    console.log(localStorage.getItem("Dark_mode"));
+    console.log(localStorage.getItem(LOCAL_STORAGE_DARK_MODE_KEY));
   };
 
   return (
