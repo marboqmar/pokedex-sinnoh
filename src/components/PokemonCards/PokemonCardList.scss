@@ -1,0 +1,41 @@
+@import "../../scss/global/colors";
+
+.pokemon-card--list {
+  height: 96px;
+  background-color: $color-white;
+  border-radius: 12px;
+  border: 1px solid $color-black;
+  box-shadow: 2px 2px 4px $color-dark-mode-bg;
+  padding: 0 32px;
+
+  &__heart {
+    font-size: 24px;
+  }
+
+  &__id {
+    width: 54px;
+  }
+
+  &__name {
+    width: 120px;
+  }
+
+  &__types {
+    width: 194px;
+  }
+
+  &__pokeball {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media (width < 600px) {
+  .pokemon-card--list {
+    gap: 12px;
+  }
+}
+
+body[site-theme="dark"] .pokemon-card--list {
+  box-shadow: 2px 2px 4px $color-black;
+}

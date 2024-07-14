@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { App } from "./App.tsx";
-import { PokemonList } from "./PokemonList/PokemonList.tsx";
-import { PokemonDetails } from "./PokemonDetails/PokemonDetails.tsx";
+import { PokemonDisplay } from "./components/PokemonDisplay/PokemonDisplay.tsx";
+import { PokemonDetails } from "./components/PokemonDetails/PokemonDetails.tsx";
 
 export const router = createBrowserRouter([
   {
@@ -10,10 +10,10 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <PokemonList />,
+        element: <PokemonDisplay />,
       },
       {
-        path: "/pokemonDetails",
+        path: "/pokemon-details/:pokemonName",
         element: <PokemonDetails />,
       },
     ],

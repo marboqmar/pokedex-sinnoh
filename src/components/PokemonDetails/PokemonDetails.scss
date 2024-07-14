@@ -1,0 +1,50 @@
+@import "../../scss/global/colors";
+
+.pokemon-details {
+  &__card {
+    width: 600px;
+    padding-bottom: 24px;
+    margin-bottom: 60px;
+    background-color: $color-white;
+    border-radius: 12px;
+    border: solid 1px $color-black;
+    box-shadow: 2px 2px 4px $color-dark-mode-bg;
+
+    &__back-button {
+      box-shadow: 2px 2px 4px $color-dark-mode-bg;
+    }
+  }
+}
+
+@media (width < 840px) {
+  .pokemon-details__card {
+    width: 504px;
+  }
+}
+
+@media (width < 744px) {
+  .pokemon-details__card {
+    width: 420px;
+  }
+}
+
+@media (width < 660px) {
+  .pokemon-details {
+    gap: 12px;
+  }
+}
+
+@media (width < 600px) {
+  .pokemon-details__card {
+    width: 384px;
+  }
+}
+
+body[site-theme="dark"] .pokemon-details__card {
+  background-color: $color-dark-mode-bg;
+  box-shadow: 2px 2px 4px $color-black;
+
+  &__back-button {
+    box-shadow: 2px 2px 4px $color-black;
+  }
+}

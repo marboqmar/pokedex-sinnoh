@@ -1,0 +1,105 @@
+$color-black: #171717;
+
+$color-white: #f3f3f3;
+$color-white-dark: #d9d9d9;
+
+$color-placeholder: #858585;
+
+$color-dark-mode-bg: #394553;
+$color-dark-mode-bg-dark: #252b32;
+
+$color-dark-mode-placeholder: #bcbcbc;
+
+//Pokemon types colours
+$color-grass: #62ba3b;
+$color-ice: #86cfd0;
+$color-normal: #959662;
+$color-fire: #eb6a20;
+$color-water: #547beb;
+$color-electric: #f6c520;
+$color-fighting: #b11f19;
+$color-poison: #8c2c8c;
+$color-ground: #d7b251;
+$color-flying: #a88df6;
+$color-psychic: #f84276;
+$color-bug: #95aa16;
+$color-rock: #a88e27;
+$color-ghost: #5a4485;
+$color-dragon: #5b25f7;
+$color-dark: #574332;
+$color-steel: #aaa9c4;
+$color-fairy: #ff92bf;
+
+.type {
+  &--grass {
+    background-color: $color-grass;
+  }
+
+  &--ice {
+    background-color: $color-ice;
+  }
+
+  &--normal {
+    background-color: $color-normal;
+  }
+
+  &--fire {
+    background-color: $color-fire;
+  }
+
+  &--water {
+    background-color: $color-water;
+  }
+
+  &--electric {
+    background-color: $color-electric;
+  }
+
+  &--fighting {
+    background-color: $color-fighting;
+  }
+
+  &--poison {
+    background-color: $color-poison;
+  }
+
+  &--ground {
+    background-color: $color-ground;
+  }
+
+  &--flying {
+    background-color: $color-flying;
+  }
+
+  &--psychic {
+    background-color: $color-psychic;
+  }
+
+  &--bug {
+    background-color: $color-bug;
+  }
+
+  &--rock {
+    background-color: $color-rock;
+  }
+
+  &--ghost {
+    background-color: $color-ghost;
+  }
+
+  &--dragon {
+    background-color: $color-dragon;
+  }
+
+  &--dark {
+    background-color: $color-dark;
+  }
+
+  &--steel {
+    background-color: $color-steel;
+  }
+
+  &--fairy {
+    background-color: $color-fairy;
+  }
+}

@@ -1,0 +1,31 @@
+@import "./typography";
+@import "./_colors.scss";
+
+body {
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto 0 auto;
+  background-image: url("../../../public/sinnoh_map.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  background-position: center;
+  font-family: PKMN-RBYGSC, serif;
+  font-size: 14px;
+  color: $color-black;
+}
+
+body[site-theme="dark"] {
+  background-image: url("../../../public/sinnoh_map_dark.png");
+  color: $color-white;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
