@@ -1,7 +1,7 @@
 # Pokedex Sinnoh
 
 Este proyecto es una aplicación web en la que puedes consultar los Pokemon que habitan la región de Sinnoh. Para realizarla, he decidido utilizar React, Sass y TypeScript.
-He optado por React en lugar JavaScript ya que React me parece mucho más sencillo de utilizar. También he usado Sass en lugar de CSS porque veo muy útil la utilización de variables y mixins para reutilización de código y también para modificar el código de forma más sencilla. Finalmente, he elegido TypeScript ya que, aunque complica ligeramente el código, hace mucho más predecible la aplicación.
+He optado por React en lugar JavaScript ya que React me parece mucho más sencillo de utilizar y permite reusabilidad de componentes. También he usado Sass en lugar de CSS porque veo muy útil la utilización de variables y mixins para reutilización de código y también para modificar el código de forma más sencilla. Finalmente, he elegido TypeScript ya que, aunque complica ligeramente el código, hace la aplicación más segura gracias al tipado y permite encontrar errores en el código mucho antes en el proceso de desarrollo.
 
 Mi primer paso para realizar esta aplicación ha sido familiarizarme con la API que provee los datos de los pokemon que se van a mostrar (PokeApi, https://pokeapi.co/) y encontrar el listado completo de los pokemon a mostrar, ya que solo queremos los pokemon que aparecen en la región de Sinnoh (https://www.serebii.net/pokemon/gen4pokemon.shtml). He definido la información a obtener de la API y he realizado el diseño acorde a esta información (por ejemplo, se ha visto que ningún pokemon tiene más de dos tipos, por lo que esto se ha tenido en cuenta a la hora de realizar el diseño).
 
@@ -26,10 +26,10 @@ En el caso del modo oscuro, me he ayudado de este blog para implementarlo https:
 
 Lo siguiente que he implementado ha sido los filtros de favoritos y búsqueda por nombre.
 
-Para el responsive, he hecho un contexto para ver el tamaño de la pantalla, pero tenía mal apuntado en mis apuntes el removeEventListener, por lo que solo calculaba una vez el ancho de la pantalla y ya no lo actualizaba. En este blog he visto la solución a mi problema https://stackoverflow.com/questions/19014250/rerender-view-on-browser-resize-with-react.
-Para hacer el hamburger menu con dropdown me he ayudado de esta guía https://selftaughttxg.com/2024/02-24/developing-a-dynamic-hamburger-menu-in-react-a-step-by-step-guide/
+Para el _responsive_, he hecho un contexto para ver el tamaño de la pantalla, pero tenía mal apuntado en mis apuntes el `removeEventListener`, por lo que solo calculaba una vez el ancho de la pantalla y ya no lo actualizaba. En este blog he visto la solución a mi problema https://stackoverflow.com/questions/19014250/rerender-view-on-browser-resize-with-react.
+Para hacer el _hamburger menu_ con dropdown me he ayudado de esta guía https://selftaughttxg.com/2024/02-24/developing-a-dynamic-hamburger-menu-in-react-a-step-by-step-guide/
 
-Como el responsive causa re-renderizaciones la experiencia con el modo oscuro se veía afectada, así que he movido el modo oscuro al local storage para que se mantenga entre renderizaciones.
+Como el _responsive_ causa re-renderizaciones la experiencia con el modo oscuro se veía afectada, así que he movido el modo oscuro al local storage para que se mantenga entre renderizaciones.
 
-Al añadir testing, al intentar usar `toBeInTheDocument()` me aparecía un error indicando que esta propiedad no existía, he conseguido arreglar este problema con las respuestas encontradas en este post https://github.com/testing-library/jest-dom/issues/515.
+Finalmente, al añadir testing, al intentar usar `toBeInTheDocument()` me aparecía un error indicando que esta propiedad no existía. He conseguido arreglar este problema con las respuestas encontradas en este post https://github.com/testing-library/jest-dom/issues/515.
 He visto como generar random booleans aquí https://stackoverflow.com/questions/36756331/js-generate-random-boolean.
