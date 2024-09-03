@@ -8,7 +8,6 @@ export interface pokemonDetailsParsed {
   types: string[];
   weight: number;
   height: number;
-  baseExperience: number;
   hp: number;
   attack: number;
   defense: number;
@@ -36,7 +35,6 @@ export interface pokemonDetailsFromApi {
   }[];
   weight: number;
   height: number;
-  base_experience: number;
   stats: {
     base_stat: number;
     stat: {

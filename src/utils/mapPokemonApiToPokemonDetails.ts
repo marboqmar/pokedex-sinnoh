@@ -7,8 +7,7 @@ export const mapPokemonApiToPokemonDetails = (
   pokemonInfoFromApi: pokemonDetailsFromApi[],
 ): pokemonDetailsParsed[] => {
   return pokemonInfoFromApi.map((pokemon) => {
-    const { sprites, id, name, types, weight, height, base_experience, stats } =
-      pokemon;
+    const { sprites, id, name, types, weight, height, stats } = pokemon;
     const pokemonTypes: string[] = [];
 
     types.forEach((type) => {
@@ -25,7 +24,6 @@ export const mapPokemonApiToPokemonDetails = (
       types: pokemonTypes,
       weight: weight / 10,
       height: height * 10,
-      baseExperience: base_experience,
       hp: stats[0].base_stat,
       attack: stats[1].base_stat,
       defense: stats[2].base_stat,
