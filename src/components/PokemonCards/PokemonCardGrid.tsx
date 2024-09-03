@@ -13,28 +13,29 @@ export const PokemonCardGrid = (pokemonInfo: pokemonDetailsParsed) => {
       isLink
       to={`pokemon-details/${pokemonInfo.name}`}
     >
-      <div className="flex-row space-between pokemon-card--grid__imgs">
+      <div className="flex-row space-between pokemon-card--grid__pokeball-and-fav">
         <img
-          className={"pokemon-card__pokeball pokemon-card--grid__pokeball"}
+          className={"pokemon-card--grid__pokeball"}
           src={"/pokeball.png"}
           alt="Pokeball icon"
         />
-        <img
-          src={pokemonInfo.imgs.default}
-          alt="Image depicting selected pokemon"
-        />
         <FavButton pokemonInfo={pokemonInfo} />
       </div>
-      <div className={"flex-column align-center gap-12"}>
-        <p>#{pokemonInfo.id}</p>
-        <p>{capitalizeFirstLetter(pokemonInfo.name)}</p>
-        <div className="flex-row gap-12">
+      <div className={"flex-row gap-48"}>
+        <div className={"flex-column gap-12 margin-top-12"}>
+          <p>#{pokemonInfo.id}</p>
+          <p>{capitalizeFirstLetter(pokemonInfo.name)}</p>
           {pokemonInfo.types.map((type) => (
             <div className={`type-styling type--${type}`} key={type}>
               {type.toUpperCase()}
             </div>
           ))}
         </div>
+        <img
+          className={"pokemon-card--grid__pokemon-img"}
+          src={pokemonInfo.imgs.default}
+          alt="Image depicting selected pokemon"
+        />
       </div>
     </Button>
   );

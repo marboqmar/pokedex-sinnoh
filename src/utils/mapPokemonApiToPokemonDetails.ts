@@ -17,10 +17,8 @@ export const mapPokemonApiToPokemonDetails = (
 
     return {
       imgs: {
-        default: sprites.front_default,
-        defaultBack: sprites.back_default,
-        shiny: sprites.front_shiny,
-        shinyBack: sprites.back_shiny,
+        default: sprites.other["official-artwork"].front_default,
+        shiny: sprites.other["official-artwork"].front_shiny,
       },
       id: id,
       name: name,

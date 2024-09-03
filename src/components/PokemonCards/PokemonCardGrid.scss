@@ -1,15 +1,15 @@
 @import "../../scss/global/colors";
 
 .pokemon-card--grid {
-  height: 195px;
-  width: 218px;
+  height: 204px;
+  width: 420px;
   background-color: $color-white;
   border-radius: 12px;
   box-shadow: 2px 2px 4px $color-dark-mode-bg;
   margin-left: auto;
   margin-right: auto;
 
-  &__imgs {
+  &__pokeball-and-fav {
     padding: 0 6px;
     box-sizing: border-box;
     width: 100%;
@@ -34,6 +34,11 @@
     &--fav {
       color: red;
     }
+  }
+
+  &__pokemon-img {
+    height: 200px;
+    width: 200px;
   }
 }
 

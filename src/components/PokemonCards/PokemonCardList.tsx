@@ -28,6 +28,7 @@ export const PokemonCardList = (pokemonInfo: pokemonDetailsParsed) => {
     >
       <FavButton pokemonInfo={pokemonInfo} />
       <img
+        className={"pokemon-card--list__pokemon-img"}
         src={pokemonInfo.imgs.default}
         alt="Image depicting selected pokemon"
       />

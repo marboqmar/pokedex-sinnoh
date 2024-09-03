@@ -23,13 +23,7 @@ export const Header = () => {
         to={"/"}
       >
         <img
-          src={
-            windowWidth > 1014
-              ? "/logo.png"
-              : windowWidth > 600
-                ? "./logo-vertical.png"
-                : "logo-compact.png"
-          }
+          src={windowWidth > 1014 ? "/logo.png" : "logo-vertical.png"}
           alt="logo"
         />
       </Button>

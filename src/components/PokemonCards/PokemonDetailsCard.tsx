@@ -1,6 +1,5 @@
 import { pokemonDetailsParsed } from "../../models/pokemonInfo.ts";
 import { capitalizeFirstLetter } from "../../utils/utils.ts";
-import { PokemonDetailsImages } from "../PokemonDetails/PokemonDetailsImages.tsx";
 
 export const PokemonDetailsCard = (pokemon: pokemonDetailsParsed) => {
   const {
@@ -22,7 +21,18 @@ export const PokemonDetailsCard = (pokemon: pokemonDetailsParsed) => {
     <div className={"flex-column  align-center pokemon-details__card"}>
       <div className={"flex-column align-center gap-32"}>
         <div className={"flex-column align-center gap-12"}>
-          <PokemonDetailsImages pokemon={pokemon} />
+          <div className={"flex-row gap-12"}>
+            <img
+              className={"pokemon-details__imgs"}
+              src={pokemon.imgs.default}
+              alt="Image depicting selected pokemon"
+            />
+            <img
+              className={"pokemon-details__imgs"}
+              src={pokemon.imgs.shiny}
+              alt="Image depicting selected pokemon on its shiny version"
+            />
+          </div>
           <p>#{id}</p>
           <p>{capitalizeFirstLetter(name)}</p>
           <div className="flex-row gap-12">

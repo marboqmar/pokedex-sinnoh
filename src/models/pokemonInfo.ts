@@ -1,9 +1,7 @@
 export interface pokemonDetailsParsed {
   imgs: {
     default: string;
-    defaultBack: string;
     shiny: string;
-    shinyBack: string;
   };
   id: number;
   name: string;
@@ -22,10 +20,12 @@ export interface pokemonDetailsParsed {
 
 export interface pokemonDetailsFromApi {
   sprites: {
-    back_default: string;
-    back_shiny: string;
-    front_default: string;
-    front_shiny: string;
+    other: {
+      "official-artwork": {
+        front_default: string;
+        front_shiny: string;
+      };
+    };
   };
   id: number;
   name: string;

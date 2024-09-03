@@ -4,9 +4,9 @@
 body {
   padding: 0;
   box-sizing: border-box;
-  max-width: 1440px;
+  //max-width: 1440px;
   margin: 0 auto 0 auto;
-  background-image: url("../../../public/sinnoh_map.png");
+  background-image: url("../../../public/background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -18,7 +18,7 @@ body {
 }
 
 body[site-theme="dark"] {
-  background-image: url("../../../public/sinnoh_map_dark.png");
+  background-image: url("../../../public/background-dark.png");
   color: $color-white;
 }
 

@@ -17,7 +17,9 @@ export const PokemonDetails = () => {
   return (
     <>
       {!selectedPokemon ? (
-        <p>Pokemon not found</p>
+        <p className={"pokemon-details__pokemon-not-found-msg"}>
+          Pokemon not found
+        </p>
       ) : (
         <div
           className={"flex justify-center gap-48 margin-top-60 pokemon-details"}
