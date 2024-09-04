@@ -7,15 +7,14 @@
   &__button {
     padding: 8px 12px;
     border-radius: 8px;
+  }
 
-    &--active {
-      background-color: $color-flying;
-    }
+  &__current-page {
+    background-color: $color-flying;
+    border: 1px solid $color-black;
   }
 }
 
-body[site-theme="dark"] .pagination__button {
-  &--active {
-    background-color: $color-water;
-  }
+body[site-theme="dark"] .pagination__current-page {
+  background-color: $color-water;
 }
