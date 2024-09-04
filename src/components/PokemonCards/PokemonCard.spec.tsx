@@ -14,16 +14,13 @@ import { PokemonDetailsCard } from "./PokemonDetailsCard.tsx";
 const randomPokemon: pokemonDetailsParsed = {
   imgs: {
     default: generateRandomString(),
-    defaultBack: generateRandomString(),
     shiny: generateRandomString(),
-    shinyBack: generateRandomString(),
   },
   id: generateRandomNumber(),
   name: capitalizeFirstLetter(generateRandomString()),
   types: [generateRandomString(), generateRandomString()],
   weight: generateRandomNumber(),
   height: generateRandomNumber(),
-  baseExperience: generateRandomNumber(),
   hp: generateRandomNumber(),
   attack: generateRandomNumber(),
   defense: generateRandomNumber(),
