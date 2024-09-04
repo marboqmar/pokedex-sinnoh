@@ -66,6 +66,25 @@
   }
 }
 
+@media (width < 589px) {
+  .header__search-bar {
+    width: 240px;
+  }
+}
+
+@media (width < 513px) {
+  .header__search-bar {
+    width: 204px;
+  }
+}
+
+@media (width < 468px) {
+  .header__search-bar {
+    width: 180px;
+    border: 2px solid red;
+  }
+}
+
 body[site-theme="dark"] .header {
   &__search-bar {
     background-color: $color-dark-mode-bg;

@@ -36,9 +36,31 @@
   }
 }
 
-@media (width < 600px) {
+@media (width < 612px) {
   .pokemon-card--list {
     gap: 12px;
+
+    &__text-and-types {
+      gap: 32px;
+    }
+  }
+}
+
+@media (width < 552px) {
+  .pokemon-card--list__text-and-types {
+    gap: 12px;
+  }
+}
+
+@media (width < 522px) {
+  .pokemon-card--list__text-and-types {
+    gap: 0;
+  }
+}
+
+@media (width < 522px) {
+  .pokemon-card--list {
+    gap: 6px;
   }
 }
 

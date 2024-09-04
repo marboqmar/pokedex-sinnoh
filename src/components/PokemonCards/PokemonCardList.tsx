@@ -32,7 +32,7 @@ export const PokemonCardList = (pokemonInfo: pokemonDetailsParsed) => {
         src={pokemonInfo.imgs.default}
         alt="Image depicting selected pokemon"
       />
-      <div className={"flex-row gap-48"}>
+      <div className={"flex-row gap-48 pokemon-card--list__text-and-types"}>
         <p className={"pokemon-card--list__id"}>#{pokemonInfo.id}</p>
         <p className={"pokemon-card--list__name"}>
           {capitalizeFirstLetter(pokemonInfo.name)}

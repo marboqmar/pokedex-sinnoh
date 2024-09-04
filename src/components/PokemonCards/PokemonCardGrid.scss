@@ -42,6 +42,19 @@
   }
 }
 
+@media (width < 513px) {
+  .pokemon-card--grid {
+    height: 186px;
+    width: 348px;
+
+    &__pokemon-img {
+      padding-top: 24px;
+      height: 150px;
+      width: 150px;
+    }
+  }
+}
+
 body[site-theme="dark"] .pokemon-card--grid {
   box-shadow: 2px 2px 4px $color-black;
 }
