@@ -28,3 +28,13 @@ a {
 p {
   margin: 0;
 }
+
+@media (orientation: portrait) {
+  body {
+    background-image: url("/mobile-background.png");
+  }
+
+  body[site-theme="dark"] {
+    background-image: url("/mobile-background-dark.png");
+  }
+}
