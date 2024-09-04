@@ -53,11 +53,15 @@ export const PokemonCardList = (pokemonInfo: pokemonDetailsParsed) => {
           </div>
         )}
       </div>
-      <img
-        className={"pokemon-card--list__pokeball"}
-        src={"/pokeball.png"}
-        alt="Pokeball icon"
-      />
+      {windowWidth > 498 ? (
+        <img
+          className={"pokemon-card--list__pokeball"}
+          src={"/pokeball.png"}
+          alt="Pokeball icon"
+        />
+      ) : (
+        <></>
+      )}
     </Button>
   );
 };

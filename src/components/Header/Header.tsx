@@ -2,12 +2,13 @@ import "./Header.scss";
 import { Button } from "../Button/Button.tsx";
 import { Link } from "react-router-dom";
 import { SearchBar } from "./SearchBar.tsx";
-import { ShowViewOptionsAndFavsButtons } from "./ShowViewOptionsAndFavsButtons.tsx";
 import { useContext } from "react";
 import { WindowWidthContext } from "../../contexts/WindowWidthContextProvider.tsx";
 import { useIsOnPokemonDetails } from "../../utils/useIsOnPokemonDetails.ts";
 import { BurgerButton } from "./HeaderButtons/BurgerButton.tsx";
 import { ThemeChangeButton } from "./HeaderButtons/ThemeChangeButton.tsx";
+import { ViewOptionsButton } from "./HeaderButtons/ViewOptionsButton.tsx";
+import { DisplayOnlyFavsButton } from "./HeaderButtons/DisplayOnlyFavsButton.tsx";
 
 export const Header = () => {
   const { windowWidth } = useContext(WindowWidthContext);
@@ -38,7 +39,8 @@ export const Header = () => {
         {!useIsOnPokemonDetails() ? (
           windowWidth > 822 ? (
             <>
-              <ShowViewOptionsAndFavsButtons />
+              <ViewOptionsButton />
+              <DisplayOnlyFavsButton />
               <ThemeChangeButton />
             </>
           ) : (

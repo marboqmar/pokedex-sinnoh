@@ -1,7 +1,8 @@
 import { Button } from "../../Button/Button.tsx";
 import { useState } from "react";
-import { ShowViewOptionsAndFavsButtons } from "../ShowViewOptionsAndFavsButtons.tsx";
 import { ThemeChangeButton } from "./ThemeChangeButton.tsx";
+import { ViewOptionsButton } from "./ViewOptionsButton.tsx";
+import { DisplayOnlyFavsButton } from "./DisplayOnlyFavsButton.tsx";
 
 export const BurgerButton = () => {
   const [isActive, setIsActive] = useState(false);
@@ -20,7 +21,8 @@ export const BurgerButton = () => {
       </Button>
       {isActive && (
         <div className="flex gap-12 header__dropdown-menu">
-          <ShowViewOptionsAndFavsButtons />
+          <ViewOptionsButton />
+          <DisplayOnlyFavsButton />
           <ThemeChangeButton />
         </div>
       )}

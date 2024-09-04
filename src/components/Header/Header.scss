@@ -1,7 +1,7 @@
 @import "../../scss/global/colors";
 
 .header {
-  padding: 0 30px;
+  padding: 12px 30px;
   max-width: 1440px;
   margin: 0 auto;
 
@@ -80,10 +80,14 @@
 
 @media (width < 468px) {
   .header {
-    padding: 0 12px;
+    padding: 12px;
 
     &__search-bar {
       width: 180px;
+    }
+
+    &__dropdown-menu {
+      right: 12px;
     }
   }
 }

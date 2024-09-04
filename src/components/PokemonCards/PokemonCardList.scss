@@ -60,7 +60,13 @@
 
 @media (width < 522px) {
   .pokemon-card--list {
-    gap: 6px;
+    gap: 12px;
+  }
+}
+
+@media (width < 468px) {
+  .pokemon-card--list {
+    padding: 0 24px;
   }
 }
 
