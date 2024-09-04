@@ -5,7 +5,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   margin: 0 auto 0 auto;
-  background-image: url("../../../public/background.png");
+  background-image: url("/background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -17,7 +17,7 @@ body {
 }
 
 body[site-theme="dark"] {
-  background-image: url("../../../public/background-dark.png");
+  background-image: url("/background-dark.png");
   color: $color-white;
 }
 
