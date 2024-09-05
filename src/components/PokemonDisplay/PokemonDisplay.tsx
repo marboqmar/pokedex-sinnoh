@@ -53,12 +53,16 @@ export const PokemonDisplay = () => {
           </div>
         )}
       </div>
-      <Pagination
-        pokemonPerPage={pokemonPerPage}
-        length={length}
-        setNewCurrentPage={setCurrentPage}
-        currentPage={currentPage}
-      />
+      {isOnlyFavs && filteredPokemon.length === 0 ? (
+        <></>
+      ) : (
+        <Pagination
+          pokemonPerPage={pokemonPerPage}
+          length={length}
+          setNewCurrentPage={setCurrentPage}
+          currentPage={currentPage}
+        />
+      )}
     </>
   );
 };
