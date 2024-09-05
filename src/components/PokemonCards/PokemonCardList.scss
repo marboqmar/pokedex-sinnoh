@@ -70,6 +70,12 @@
   }
 }
 
+@media (width < 444px) {
+  .pokemon-card--list {
+    padding: 0 6px 0 12px;
+  }
+}
+
 body[site-theme="dark"] .pokemon-card--list {
   box-shadow: 2px 2px 4px $color-black;
 }
