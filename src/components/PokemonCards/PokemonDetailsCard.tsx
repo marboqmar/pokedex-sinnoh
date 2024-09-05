@@ -26,12 +26,12 @@ export const PokemonDetailsCard = (pokemon: pokemonDetailsParsed) => {
         <div className={"flex-column align-center gap-12"}>
           <div className={"flex-row gap-12"}>
             <img
-              className={"pokemon-details__imgs"}
+              className={"pokemon-details__img"}
               src={pokemon.imgs.default}
               alt="Image depicting selected pokemon"
             />
             <img
-              className={"pokemon-details__imgs"}
+              className={"pokemon-details__img"}
               src={pokemon.imgs.shiny}
               alt="Image depicting selected pokemon on its shiny version"
             />

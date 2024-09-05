@@ -12,7 +12,7 @@
     max-width: 1440px;
   }
 
-  &__imgs {
+  &__img {
     height: 200px;
     width: 200px;
   }
@@ -71,6 +71,32 @@
 @media (width < 600px) {
   .pokemon-details__card {
     width: 384px;
+  }
+}
+
+@media (width < 546px) {
+  .pokemon-details {
+    &__card {
+      width: 300px;
+    }
+
+    &__img {
+      height: 156px;
+      width: 156px;
+    }
+  }
+}
+
+@media (width < 450px) {
+  .pokemon-details {
+    &__card {
+      width: 264px;
+    }
+
+    &__img {
+      height: 138px;
+      width: 138px;
+    }
   }
 }
 
