@@ -7,6 +7,10 @@
   &__button {
     padding: 8px 12px;
     border-radius: 8px;
+
+    &-placeholder {
+      width: 34.35px;
+    }
   }
 
   &__current-page {

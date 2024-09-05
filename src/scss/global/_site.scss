@@ -9,8 +9,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  //Used height in percentage rather than vh as mobile background scrolled when using 100vh
-  height: 100%;
+  height: 100vh;
   background-position: center;
   font-family: PKMN-RBYGSC, serif;
   font-size: 14px;

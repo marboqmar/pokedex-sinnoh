@@ -45,7 +45,7 @@ export const Pagination = ({
     [setNewCurrentPage, lastAvailablePage],
   );
 
-  //This useEffect recalculates currentPage when paginationNumbers changes
+  // This useEffect recalculates currentPage when paginationNumbers changes
   useEffect(() => {
     determineCurrentPage(currentPage);
   }, [currentPage, determineCurrentPage, paginationNumbers]);
@@ -53,11 +53,14 @@ export const Pagination = ({
   return (
     <div className="flex justify-center gap-12 pagination">
       {currentPage === 1 ? (
-        <></>
+        <div className={"pagination__button-placeholder"}></div>
       ) : (
         <Button
           className={"pagination__button"}
-          onClick={() => determineCurrentPage(currentPage - 1)}
+          onClick={() => {
+            determineCurrentPage(currentPage - 1);
+            window.scrollTo(0, 0);
+          }}
         >
           <i className="fa-solid fa-chevron-left"></i>
         </Button>
@@ -66,11 +69,14 @@ export const Pagination = ({
         {currentPage}
       </div>
       {lastAvailablePage === currentPage ? (
-        <></>
+        <div className={"pagination__button-placeholder"}></div>
       ) : (
         <Button
           className={"pagination__button"}
-          onClick={() => determineCurrentPage(currentPage + 1)}
+          onClick={() => {
+            determineCurrentPage(currentPage + 1);
+            window.scrollTo(0, 0);
+          }}
         >
           <i className="fa-solid fa-chevron-right"></i>
         </Button>
